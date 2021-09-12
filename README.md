@@ -5,14 +5,17 @@ Webpack 5 boilerplate using Vue.js, Babel, PostCSS and Sass with a hot dev serve
 # Usage
 
 # Development server:
+
 npm start
 
 You can view the development server at `localhost:8080`.
 
 # Production build:
+
 npm run build
 
 # To view the build use http-server:
+
 npm prod
 
 # Features
@@ -41,26 +44,25 @@ npm prod
 # Babel
 
 - [`@babel/core`]
-(https://www.npmjs.com/package/@babel/core) - Transpile ES6+ to backwards compatible JavaScript
+  (https://www.npmjs.com/package/@babel/core) - Transpile ES6+ to backwards compatible JavaScript
 - [`@babel/plugin-proposal-class-properties`]
-(https://babeljs.io/docs/en/babel-plugin-proposal-class-properties) - Use properties on a class
+  (https://babeljs.io/docs/en/babel-plugin-proposal-class-properties) - Use properties on a class
 - [`@babel/preset-env`]
-(https://babeljs.io/docs/en/babel-preset-env) - Smart defaults for Babel
+  (https://babeljs.io/docs/en/babel-preset-env) - Smart defaults for Babel
 - [`@babel/babel-plugin-transform-runtime`]
-(https://babeljs.io/docs/en/babel-plugin-transform-runtime) - Helper for Babel to use async/await
-- [`@babel/plugin-proposal-object-rest-spread`] 
-(https://babeljs.io/docs/en/babel-plugin-proposal-object-rest-spread) - For using rest
-- [`@babel/plugin-transform-arrow-functions`] 
-(https://babeljs.io/docs/en/babel-plugin-transform-arrow-functions) - For using arrow funtions
-- [`@babel/plugin-transform-async-to-generator`] 
-(https://babeljs.io/docs/en/babel-plugin-transform-async-to-generator) - To use async and generators
-
+  (https://babeljs.io/docs/en/babel-plugin-transform-runtime) - Helper for Babel to use async/await
+- [`@babel/plugin-proposal-object-rest-spread`]
+  (https://babeljs.io/docs/en/babel-plugin-proposal-object-rest-spread) - For using rest
+- [`@babel/plugin-transform-arrow-functions`]
+  (https://babeljs.io/docs/en/babel-plugin-transform-arrow-functions) - For using arrow funtions
+- [`@babel/plugin-transform-async-to-generator`]
+  (https://babeljs.io/docs/en/babel-plugin-transform-async-to-generator) - To use async and generators
 
 # Vue Loaders
 
 - [`vue-loader`](https://www.npmjs.com/package/vue-loader) - webpack loader for Vue Single-File Components
 - [`vue-style-loader`](https://www.npmjs.com/package/vue-style-loader) - Load styles into the DOM
-- [`vue-template-compiler`](https://www.npmjs.com/package/vue-template-compiler) - Pre compilation of Vue 2.0 templates into render functions 
+- [`vue-template-compiler`](https://www.npmjs.com/package/vue-template-compiler) - Pre compilation of Vue 2.0 templates into render functions
 
 # Loaders
 

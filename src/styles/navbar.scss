@@ -1,0 +1,47 @@
+/*
+	Navbar styles
+*/
+
+.navbar {
+	@include flexrow(center, center);
+	width: 100%;
+	height: 76px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 13;
+	background: $color-2;
+	box-shadow: 0px 0px 15px $color-5;
+
+	.container {
+		@include flexrow(space-between, center);
+	}
+
+	&__title {
+		@include flexrow(flex-start, center);
+		color: $color-4;
+		text-shadow: 0px 1px 2px black;
+		.logo {
+			border-radius: 50%;
+			box-shadow: 0px 0px 1px $color-3;
+		}
+		.name {
+			padding: 0 0 0 10px;
+		}
+	}
+
+	&__section {
+		background: transparent;
+		.link {
+			display: block;
+			padding: 15px 20px 15px 20px;
+			border-radius: 5px;
+			color: $color-3;
+			@include transition;
+			&:hover {
+				color: $color-4;
+				background: lighten($color-2, 5%);
+			}
+		}
+	}
+}

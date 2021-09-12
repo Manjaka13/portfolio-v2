@@ -1,0 +1,69 @@
+/*
+	Setup general styles
+*/
+
+html,
+body {
+	width: 100%;
+	font-size: 13pt;
+	font-family: sans-serif;
+}
+
+// Make bold texts
+.bold {
+	font-weight: bold;
+}
+
+// Responsive container
+.container {
+	width: 1500px;
+	@include screen-lg {
+		width: 80%;
+	}
+	@include screen-md {
+		width: 90%;
+	}
+}
+
+// Remove default padding and margin
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+form {
+	margin: 0;
+	padding: 0;
+}
+
+// Override lists
+ul {
+	display: flex;
+	list-style-type: none;
+}
+
+// Default inputs
+button,
+input,
+textarea {
+	padding: 10px 20px 10px 20px;
+	border: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+// Remove selection
+@mixin no-select {
+	user-select: none;
+}
+
+// Add some transition
+@mixin transition($duration: 0.2s) {
+	transition: all $duration ease-out;
+}

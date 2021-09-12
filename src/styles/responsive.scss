@@ -1,0 +1,32 @@
+/*
+    Media queries
+*/
+
+$screen-lg: 1800px;
+$screen-md: 1000px;
+$screen-sm: 800px;
+$screen-sm: 550px;
+
+@mixin screen-lg {
+	@media only screen and (max-width: $screen-lg) {
+		@content;
+	}
+}
+
+@mixin screen-md {
+	@media only screen and (max-width: $screen-md) {
+		@content;
+	}
+}
+
+@mixin screen-sm {
+	@media only screen and (max-width: $screen-sm) {
+		@content;
+	}
+}
+
+@mixin screen-xsm {
+	@media only screen and (max-width: $screen-xsm) {
+		@content;
+	}
+}

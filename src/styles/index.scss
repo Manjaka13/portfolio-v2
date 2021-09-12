@@ -1,7 +1,13 @@
-@font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter.ttf');
-}
+/*
+	Import necessary sheets
+*/
 
-@import 'variables';
-@import 'scaffolding';
+// Base
+@import "./responsive.scss";
+@import "./flex.scss";
+@import "./colors.scss";
+@import "./scaffolding.scss";
+
+// Components
+@import "./cover.scss";
+@import "./navbar.scss";
