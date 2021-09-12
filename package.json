@@ -53,6 +53,10 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.12.5",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/vue-fontawesome": "^2.0.2",
     "core-js": "^3.10.0",
     "vue": "^2.6.12",
     "vue-router": "^3.4.9",

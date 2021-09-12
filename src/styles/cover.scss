@@ -8,12 +8,204 @@
 	@include flexrow(center);
 
 	&--container {
-		height: 100%;
+		@include flexrow(space-between, center);
+		height: calc(100% - 76px);
 		box-shadow: 0px 0px 5px $color-5;
+		padding: 76px 0 0 0;
 	}
 
-	&--sunset {
+	&--0 {
 		background: url(images/0.png) center center no-repeat;
 		background-size: cover;
+	}
+
+	&--1 {
+		background: url(images/1.png) center center no-repeat;
+		background-size: cover;
+	}
+
+	&--2 {
+		background: url(images/2.png) center center no-repeat;
+		background-size: cover;
+	}
+
+	&--3 {
+		background: url(images/3.png) center center no-repeat;
+		background-size: cover;
+	}
+
+	&--4 {
+		background: url(images/4.png) center center no-repeat;
+		background-size: cover;
+	}
+
+	&__card {
+		@include flexcol(center);
+		width: 400px;
+		height: 80%;
+		border-radius: 10px;
+		box-shadow: 0px 0px 10px $color-2;
+		background: rgba(40, 40, 40, 0.9);
+		margin: 0 0 0 20px;
+	}
+
+	&__card-figure {
+		@include flexrow(center, center);
+		width: 260px;
+		height: 260px;
+		background: white;
+		overflow: hidden;
+		box-shadow: 0px 0px 3px $color-2;
+		margin: 20px 0 0 0;
+		transform: rotate(10deg);
+		animation: oscillation infinite 3.1s ease-in-out;
+
+		@keyframes oscillation {
+			0% {
+				transform: rotate(10deg);
+				transform-origin: 30px 30px;
+			}
+			50% {
+				transform: rotate(17deg);
+				transform-origin: 30px 30px;
+			}
+			100% {
+				transform: rotate(10deg);
+				transform-origin: 30px 30px;
+			}
+		}
+	}
+
+	&__card-image {
+		box-shadow: 0px 0px 1px black;
+		width: calc(260px - 10px);
+		height: calc(260px - 10px);
+	}
+
+	&__card-title {
+		color: $color-4;
+		padding: 60px 20px 20px 20px;
+		text-shadow: 0px 1px 2px black;
+	}
+
+	&__card-separator {
+		width: calc(100% - 40px);
+		height: 3px;
+		margin: 0;
+		background: $color-theme;
+	}
+
+	&__card-description {
+		padding: 20px;
+		color: white;
+		text-align: justify;
+	}
+
+	&__card-current-work {
+		@include flexrow(space-between, center);
+		width: calc(100% - 40px);
+		padding: 0 20px 0 20px;
+		.label {
+			color: rgb(180, 180, 180);
+			text-decoration: underline;
+		}
+		.company {
+			@include flexrow(center, center);
+			@include transition;
+			border-radius: 10px;
+			cursor: pointer;
+			&:hover {
+				background: rgba(20, 20, 20, 0.5);
+			}
+		}
+		.company-figure {
+			@include flexrow(center, center);
+			width: 50px;
+			height: 50px;
+			overflow: hidden;
+			border-radius: 10px;
+		}
+		.company-image {
+			height: 100%;
+		}
+		.company-name {
+			color: white;
+			padding: 0 0 0 10px;
+		}
+	}
+
+	&__right-box {
+		@include flexcol(center, space-between);
+		width: calc(100% - 460px);
+		height: 80%;
+		margin: 0 20px 0 0;
+	}
+
+	&__date {
+		@include flexcol(center);
+		width: 100%;
+		.time {
+			@include flexrow(center);
+			width: 100%;
+			font-size: 100pt;
+			font-weight: bold;
+			color: $color-4;
+			text-shadow: 0px 1px 2px black;
+		}
+		.label {
+			width: 100%;
+			text-align: center;
+			color: white;
+			text-shadow: 0px 1px 2px black;
+		}
+		.separator {
+			width: 40%;
+			height: 3px;
+			background: white;
+			box-shadow: 0px 1px 2px black;
+			margin: 20px 0 0 0;
+		}
+	}
+
+	&__greetings {
+		@include flexcol(center);
+		.label {
+			color: white;
+			text-shadow: 0px 1px 2px black;
+			font-size: 15pt;
+			font-weight: bold;
+			padding: 0 0 20px 0;
+		}
+		.home {
+			background: $color-theme;
+			color: $color-4;
+			border-radius: 5px;
+			box-shadow: 0px 0px 4px rgb(40, 40, 40);
+			cursor: pointer;
+			@include transition;
+			&:hover {
+				box-shadow: 0px 0px 20px black;
+			}
+		}
+	}
+
+	&__social {
+		@include flexrow(center);
+		width: 100%;
+		&-item {
+			margin: 0 10px 0 10px;
+		}
+		&-link {
+			color: $color-4;
+			font-size: 30pt;
+			position: relative;
+			top: 0;
+			left: 0;
+			@include transition;
+			&:hover {
+				text-shadow: 0px 0px 5px white;
+				top: -10px;
+			}
+		}
 	}
 }
