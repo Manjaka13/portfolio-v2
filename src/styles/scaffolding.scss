@@ -17,10 +17,10 @@ body {
 // Responsive container
 .container {
 	width: 1500px;
-	@include screen-lg {
+	@include screen-lg-x {
 		width: 80%;
 	}
-	@include screen-md {
+	@include screen-md-x {
 		width: 90%;
 	}
 }
