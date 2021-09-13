@@ -2,6 +2,9 @@
 	<div id="home">
 		<Navbar />
 		<Cover />
+		<div class="container">
+			<router-view />
+		</div>
 		<!-- <router-link to="/">Home</router-link>|<router-link to="/about"
 			>About</router-link
 		>
@@ -20,3 +23,9 @@ export default {
 	},
 };
 </script>
+
+<style lang="scss" scoped>
+#home .container {
+	margin: auto;
+}
+</style>
