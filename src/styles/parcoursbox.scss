@@ -1,0 +1,49 @@
+.parcoursbox {
+	@include flexrow;
+	box-shadow: 0px 0px 10px $color-3;
+	width: 550px;
+	height: 260px;
+	overflow: hidden;
+	border-radius: 10px;
+	background: $color-4;
+
+	&__illustration {
+		@include flexcol(center, center);
+		width: 50%;
+		height: 100%;
+		overflow: hidden;
+		box-shadow: 0px 0px 5px $color-3;
+		position: relative;
+	}
+
+	&__image {
+		height: 100%;
+	}
+
+	&__content {
+		width: 50%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	&__exp {
+		position: absolute;
+		bottom: 0;
+		padding: 10px;
+		margin: 20px;
+		background: rgba(40, 40, 40, 0.7);
+		border-radius: 5px;
+		color: white;
+	}
+
+	&__title {
+		padding: 10px 20px 10px 20px;
+		color: $color-5;
+		font-size: 17pt;
+	}
+
+	&__text {
+		padding: 0 20px 0 20px;
+		font-size: 11pt;
+	}
+}

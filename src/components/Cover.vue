@@ -35,7 +35,7 @@
 				</div>
 				<div class="cover__greetings">
 					<p class="label">{{greeting}}</p>
-					<button class="home">Introduce myself</button>
+					<button class="home">Download my resume</button>
 				</div>
 				<ul class="cover__social">
 					<li v-for="(s, key) in social" :key="key" class="cover__social-item">

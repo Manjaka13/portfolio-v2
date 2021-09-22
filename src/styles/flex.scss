@@ -18,6 +18,7 @@
 // Flex direction column reverse
 @mixin flexcolreverse($align-x: flex-start, $align-y: flex-start) {
 	@include flexbox;
+	flex-direction: column-reverse;
 	justify-content: $align-y;
 	align-items: $align-x;
 }
@@ -34,7 +35,6 @@
 @mixin flexrowreverse($align-x: flex-start, $align-y: flex-start) {
 	@include flexbox;
 	flex-direction: row-reverse;
-	@include flexorder($order);
 	justify-content: $align-x;
 	align-items: $align-y;
 }

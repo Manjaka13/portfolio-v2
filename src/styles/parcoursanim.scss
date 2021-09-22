@@ -1,0 +1,15 @@
+.parcoursanim {
+	@include flexrow(flex-start, center);
+	width: 550px;
+	height: 260px;
+	overflow: hidden;
+
+	&--reverse {
+		@include flexrow(flex-end, center);
+	}
+
+	.anim {
+		height: calc(100% - 40px);
+		border: none;
+	}
+}

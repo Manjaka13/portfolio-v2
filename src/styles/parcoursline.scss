@@ -1,0 +1,49 @@
+.parcoursline {
+	@include flexcol(center, center);
+	width: 100px;
+	height: 260px;
+	position: relative;
+
+	&:after {
+		content: "";
+		width: 5px;
+		height: 100%;
+		background: $color-theme;
+		position: absolute;
+		top: 0;
+		z-index: -1;
+	}
+
+	.start {
+		position: absolute;
+		top: 0;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background: $color-theme;
+	}
+
+	.icon {
+		@include flexcol(center, center);
+		width: 70px;
+		height: 70px;
+		border-radius: 50%;
+		background: $color-theme;
+		color: white;
+		font-size: 30pt;
+	}
+
+	.date {
+		position: absolute;
+		right: -40%;
+		padding: 0;
+		color: rgb(160, 160, 160);
+	}
+
+	&--reverse {
+		.date {
+			right: 0;
+			left: -40%;
+		}
+	}
+}

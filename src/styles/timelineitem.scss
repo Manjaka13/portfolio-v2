@@ -1,0 +1,8 @@
+.timelineitem {
+	@include flexrow(space-between);
+	width: 100%;
+
+	&--reverse {
+		@include flexrowreverse(space-between);
+	}
+}
