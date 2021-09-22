@@ -1,0 +1,37 @@
+.tech {
+	@include flexcol(center);
+	width: 100%;
+	padding: 20px 0 20px 0;
+
+	&__list {
+		@include flexrow(space-between);
+		width: 100%;
+		flex-wrap: wrap;
+	}
+
+	.techitem {
+		margin: 0 0 20px 0;
+	}
+
+	&__plus {
+		@include flexrow(center, center);
+		background: $color-theme;
+		color: white;
+		padding: 5px 20px 5px 20px;
+		border-radius: 20px;
+		cursor: pointer;
+		@include transition;
+		.icon {
+			font-size: 20pt;
+		}
+		.text {
+			padding: 0 0 0 5px;
+		}
+		&:hover {
+			box-shadow: 0px 0px 10px $color-3;
+		}
+		&:active {
+			box-shadow: 0px 0px 20px black;
+		}
+	}
+}
