@@ -1,29 +1,37 @@
 <template>
 	<div class="contacts">
-		<h2 class="contacts__title">Let's talk</h2>
-		<div class="contacts__separator"></div>
-		<form class="contacts__form">
-			<div class="contacts__group">
-				<input class="contacts__input" type="text" placeholder="Your name" />
-				<div class="contacts__icon">
-					<Icon class="icon" icon="user" />
+		<div class="container">
+			<h2 class="contacts__title">Let's talk</h2>
+			<div class="contacts__separator"></div>
+			<form class="contacts__form">
+				<div class="contacts__group">
+					<input class="contacts__input" type="text" placeholder="Your name" />
+					<div class="contacts__icon">
+						<Icon class="icon" icon="user" />
+					</div>
 				</div>
-			</div>
-			<div class="contacts__group">
-				<input class="contacts__input" type="email" placeholder="Your email" />
-				<div class="contacts__icon">
-					<Icon class="icon" icon="envelope" />
+				<div class="contacts__group">
+					<input class="contacts__input" type="email" placeholder="Your email" />
+					<div class="contacts__icon">
+						<Icon class="icon" icon="envelope" />
+					</div>
 				</div>
-			</div>
-			<textarea
-				class="contacts__message"
-				placeholder="Enter your message here"
-			></textarea>
-		</form>
+				<textarea
+					class="contacts__message"
+					placeholder="Enter your message here"
+				></textarea>
+				<button class="contacts__submit" type="submit">Send message</button>
+			</form>
+			<p class="contacts__caption">
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit./p>
+			</p>
+			<Copyright />
+		</div>
 	</div>
 </template>
 
 <script>
+import Copyright from "components/Copyright.vue";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
@@ -34,6 +42,7 @@ export default {
 	name: "Contacts",
 	components: {
 		Icon: FontAwesomeIcon,
+		Copyright,
 	},
 };
 </script>

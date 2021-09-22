@@ -31,7 +31,6 @@
 		<Tech />
 
 		<ElementFilter />
-		<Contacts />
 	</div>
 </template>
 
@@ -40,7 +39,6 @@ import Title from "components/Title.vue";
 import Timelineitem from "components/Timelineitem.vue";
 import Tech from "components/Tech.vue";
 import ElementFilter from "components/ElementFilter.vue";
-import Contacts from "components/Contacts.vue";
 
 export default {
 	name: "Home",
@@ -49,7 +47,6 @@ export default {
 		Timelineitem,
 		Tech,
 		ElementFilter,
-		Contacts,
 	},
 };
 </script>

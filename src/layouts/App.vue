@@ -9,17 +9,20 @@
 			>About</router-link
 		>
 		<router-view /> -->
+		<Contacts />
 	</div>
 </template>
 
 <script>
 import Navbar from "components/Navbar.vue";
 import Cover from "components/Cover.vue";
+import Contacts from "components/Contacts.vue";
 
 export default {
 	components: {
 		Navbar,
 		Cover,
+		Contacts,
 	},
 };
 </script>
