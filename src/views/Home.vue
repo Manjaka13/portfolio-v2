@@ -15,7 +15,7 @@
 		</p>
 
 		<Timelineitem start />
-		<Timelineitem reverse />
+		<Timelineitem end reverse />
 	</div>
 </template>
 

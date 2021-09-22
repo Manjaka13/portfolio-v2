@@ -6,7 +6,7 @@
 			title="Baccalauréat"
 			content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque cupiditate cumque rem, impedit maiores ipsam corrupti neque provident veritatis. Nostrum, enim excepturi. Deleniti magnam quos exercitationem vel quas beatae cupiditate."
 		/>
-		<Parcoursline :start="start" :reverse="reverse" />
+		<Parcoursline :start="start" :end="end" :reverse="reverse" />
 		<Parcoursanim :reverse="reverse" />
 	</div>
 </template>
@@ -26,6 +26,10 @@ export default {
 	},
 	props: {
 		start: {
+			type: Boolean,
+			default: false,
+		},
+		end: {
 			type: Boolean,
 			default: false,
 		},

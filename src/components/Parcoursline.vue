@@ -5,6 +5,7 @@
 			<Icon :icon="icon" />
 		</div>
 		<div class="date">2015</div>
+		<div v-if="end" class="end"></div>
 	</div>
 </template>
 
@@ -22,6 +23,10 @@ export default {
 	},
 	props: {
 		start: {
+			type: Boolean,
+			default: false,
+		},
+		end: {
 			type: Boolean,
 			default: false,
 		},

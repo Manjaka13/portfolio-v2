@@ -14,13 +14,22 @@
 		z-index: -1;
 	}
 
-	.start {
-		position: absolute;
-		top: 0;
+	.start,
+	.end {
 		width: 20px;
 		height: 20px;
 		border-radius: 50%;
 		background: $color-theme;
+	}
+
+	.start {
+		position: absolute;
+		top: 0;
+	}
+
+	.end {
+		position: absolute;
+		bottom: 0;
 	}
 
 	.icon {
