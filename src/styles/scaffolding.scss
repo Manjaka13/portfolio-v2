@@ -7,7 +7,7 @@ body {
 	width: 100%;
 	font-size: 13pt;
 	font-family: $font-regular;
-	background: rgb(245, 245, 245);
+	background: $color-4;
 }
 
 // Make bold texts
@@ -19,10 +19,10 @@ body {
 .container {
 	width: 1500px;
 	@include screen-lg-x {
-		width: 80%;
+		width: 100%;
 	}
 	@include screen-md-x {
-		width: 90%;
+		width: 100%;
 	}
 }
 
@@ -74,7 +74,7 @@ a {
 }
 
 .paragraph {
-	padding: 20px 0 20px 0;
+	padding: 20px;
 	color: $color-6;
 	text-align: justify;
 }

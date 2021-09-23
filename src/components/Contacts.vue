@@ -3,7 +3,7 @@
 		<div class="container">
 			<h2 class="contacts__title">Let's talk</h2>
 			<div class="contacts__separator"></div>
-			<form class="contacts__form">
+			<form class="contacts__form" @submit.prevent="submitForm">
 				<div class="contacts__group">
 					<input class="contacts__input" type="text" placeholder="Your name" />
 					<div class="contacts__icon">
@@ -20,10 +20,13 @@
 					class="contacts__message"
 					placeholder="Enter your message here"
 				></textarea>
-				<button class="contacts__submit" type="submit">Send message</button>
+				<button v-if="!loading" class="contacts__submit" type="submit">
+					Send message
+				</button>
+				<Spinner v-else />
 			</form>
 			<p class="contacts__caption">
-				Lorem, ipsum dolor sit amet consectetur adipisicing elit./p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit.
 			</p>
 			<Copyright />
 		</div>
@@ -31,6 +34,7 @@
 </template>
 
 <script>
+import Spinner from "components/Spinner.vue";
 import Copyright from "components/Copyright.vue";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -43,6 +47,17 @@ export default {
 	components: {
 		Icon: FontAwesomeIcon,
 		Copyright,
+		Spinner,
+	},
+	data() {
+		return {
+			loading: false,
+		};
+	},
+	methods: {
+		submitForm() {
+			this.loading = true;
+		},
 	},
 };
 </script>

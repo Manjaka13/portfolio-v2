@@ -30,7 +30,7 @@
 
 		<Tech />
 
-		<ElementFilter />
+		<!-- <ElementFilter /> -->
 	</div>
 </template>
 

@@ -1,6 +1,6 @@
 .title-box {
-	width: 100%;
-	padding: 96px 0 0 0;
+	width: calc(100% - 40px);
+	padding: 96px 20px 0 20px;
 
 	.title1 {
 		color: $color-theme;
