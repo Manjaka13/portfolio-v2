@@ -1,8 +1,10 @@
 <template>
 	<div class="contacts">
 		<div class="container">
-			<h2 class="contacts__title">Let's talk</h2>
-			<div class="contacts__separator"></div>
+			<div class="contacts__titlebox">
+				<h2 class="contacts__title">Let's talk</h2>
+				<div class="contacts__separator"></div>
+			</div>
 			<form class="contacts__form" @submit.prevent="submitForm">
 				<div class="contacts__group">
 					<input class="contacts__input" type="text" placeholder="Your name" />
@@ -25,8 +27,8 @@
 				</button>
 				<Spinner v-else />
 			</form>
-			<p class="contacts__caption">
-				Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+			<p v-if="error.length" class="contacts__caption">
+				{{ error }}
 			</p>
 			<Copyright />
 		</div>
@@ -52,11 +54,13 @@ export default {
 	data() {
 		return {
 			loading: false,
+			error: "",
 		};
 	},
 	methods: {
 		submitForm() {
 			this.loading = true;
+			this.error = "Hello this is an error caption";
 		},
 	},
 };
