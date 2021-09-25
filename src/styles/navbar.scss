@@ -11,7 +11,7 @@
 	left: 0;
 	z-index: 13;
 	background: $color-2;
-	box-shadow: 0px 0px 15px $color-5;
+	box-shadow: 0px 0px 5px black;
 
 	.container {
 		@include flexrow(space-between, center);
@@ -27,9 +27,21 @@
 		.logo {
 			border-radius: 50%;
 			box-shadow: 0px 0px 1px $color-3;
+			@media only screen and (max-width: 450px) {
+				width: 40px;
+			}
 		}
 		.name {
 			padding: 0 0 0 10px;
+			@media only screen and (max-width: 450px) {
+				font-size: 15pt;
+			}
+		}
+	}
+
+	&__section {
+		@media only screen and (max-width: 850px) {
+			display: none;
 		}
 	}
 
@@ -45,6 +57,30 @@
 				color: $color-4;
 				background: lighten($color-2, 5%);
 			}
+		}
+	}
+
+	&__trigger {
+		display: none;
+		width: 50px;
+		height: 50px;
+		box-shadow: 0px 1px 2px black;
+		color: white;
+		font-size: 17pt;
+		border: 3px $color-theme solid;
+		border-radius: 50%;
+		cursor: pointer;
+		background: rgba(40, 40, 40, 0.4);
+		@include transition;
+		&:hover {
+			background: $color-theme;
+		}
+		&:active {
+			font-size: 11pt;
+			box-shadow: 0px 0px 10px black;
+		}
+		@media only screen and (max-width: 850px) {
+			@include flexrow(center, center);
 		}
 	}
 }
