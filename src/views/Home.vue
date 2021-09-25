@@ -1,9 +1,6 @@
 <template>
 	<div class="home">
-		<Title
-			title1="A tale of a passionate developer"
-			title2="Let me tell you a story."
-		/>
+		<Title title1="A passionate developer" title2="Let me tell a story" />
 		<p class="paragraph">
 			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam officiis
 			iure, similique quae cumque iusto, suscipit omnis expedita illo perspiciatis
@@ -17,7 +14,7 @@
 		<Timelineitem start />
 		<Timelineitem end reverse />
 
-		<Title title1="I build high quality apps !" title2="My favourite techs" />
+		<Title title1="Next gen technologies" title2="My favourite techs" />
 		<p class="paragraph">
 			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam officiis
 			iure, similique quae cumque iusto, suscipit omnis expedita illo perspiciatis
