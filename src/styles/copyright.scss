@@ -3,6 +3,9 @@
 	width: 100%;
 	padding: 20px 0 20px 0;
 	background: black;
+	@media only screen and (max-width: 600px) {
+		@include flexcol(center);
+	}
 
 	&__name {
 		color: $color-theme;
@@ -17,19 +20,22 @@
 
 	&__left,
 	&__right {
-		width: calc(50% - 10px);
 		color: white;
 		text-shadow: 0px 1px 2px black;
 		font-family: $font-bold;
 	}
 
 	&__left {
-		text-align: right;
 		padding: 0 10px 0 0;
+		@media only screen and (max-width: 600px) {
+			padding: 0 0 10px 0;
+		}
 	}
 
 	&__right {
-		text-align: left;
 		padding: 0 0 0 10px;
+		@media only screen and (max-width: 600px) {
+			padding: 10px 0 0 0;
+		}
 	}
 }
