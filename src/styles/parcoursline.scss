@@ -3,6 +3,7 @@
 	width: 100px;
 	height: 260px;
 	position: relative;
+	z-index: 1;
 
 	&:after {
 		content: "";

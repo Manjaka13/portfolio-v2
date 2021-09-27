@@ -10,6 +10,30 @@ body {
 	background: $color-4;
 }
 
+.body-time-0 {
+	background: url(../images/background-illustration-0.jpg) center center fixed
+		no-repeat;
+	background-size: cover;
+}
+
+.body-time-1 {
+	background: url(../images/background-illustration-1.jpg) center center fixed
+		no-repeat;
+	background-size: cover;
+}
+
+.body-time-2 {
+	background: url(../images/background-illustration-2.jpg) center center fixed
+		no-repeat;
+	background-size: cover;
+}
+
+.body-time-3 {
+	background: url(../images/background-illustration-3.jpg) center center fixed
+		no-repeat;
+	background-size: cover;
+}
+
 // Make bold texts
 .bold {
 	font-family: $font-bold;

@@ -2,7 +2,7 @@
 	<div class="contacts">
 		<div class="container">
 			<div class="contacts__titlebox">
-				<h2 class="contacts__title">Let's talk</h2>
+				<h2 class="contacts__title">Interested ?</h2>
 				<div class="contacts__separator"></div>
 			</div>
 			<form class="contacts__form" @submit.prevent="submitForm">
