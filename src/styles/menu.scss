@@ -1,0 +1,114 @@
+.menu {
+	display: none;
+	@media only screen and (max-width: 850px) {
+		@include flexcol(center);
+		width: 100%;
+		height: 0;
+		opacity: 0;
+		pointer-events: none;
+		position: fixed;
+		top: -50vh;
+		left: 0;
+		z-index: 12;
+		@include transition;
+	}
+
+	&__box {
+		@include flexcol(center);
+		width: 100%;
+		background: $color-5;
+		box-shadow: 0px 0px 5px black;
+		position: relative;
+	}
+
+	&__list {
+		@include flexcol(center);
+		padding: 20px 20px 60px 20px;
+		width: calc(100% - 40px);
+	}
+
+	&__list-item {
+		width: 50%;
+		margin-bottom: 10px;
+		@media only screen and (max-width: 450px) {
+			width: 80%;
+		}
+		&:last-child {
+			margin: 0;
+		}
+		.link {
+			@include flexcol(center, center);
+			width: 100%;
+			padding: 10px 0 10px 0;
+			border-radius: 5px;
+			color: $color-3;
+			@include transition;
+			&:hover {
+				color: $color-4;
+				background: lighten($color-2, 5%);
+				box-shadow: 1px 2px 5px rgb(30, 30, 30);
+			}
+		}
+	}
+
+	&__balancing {
+		@include flexcol(center, flex-end);
+		position: relative;
+		top: -30px;
+		z-index: -1;
+		width: 150px;
+		height: calc(50vh - 10px);
+		transform: rotate(0);
+		transform-origin: calc(150px / 2) 0;
+		animation: oscillation-menu infinite 3.1s ease-in-out;
+		&:before {
+			content: "";
+			width: 5px;
+			height: 100%;
+			background: $color-5;
+			box-shadow: 0px 0px 2px black;
+		}
+		@keyframes oscillation-menu {
+			0% {
+				transform: rotate(20deg);
+			}
+			50% {
+				transform: rotate(-20deg);
+			}
+			100% {
+				transform: rotate(20deg);
+			}
+		}
+	}
+
+	&__fish {
+		border: none;
+		position: absolute;
+		width: 200px;
+		bottom: -50px;
+	}
+
+	&__cat {
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		background: $color-5;
+		box-shadow: 0px 0px 5px black;
+		iframe {
+			width: 100%;
+			border: none;
+			border-radius: 50%;
+		}
+	}
+}
+
+.menu--opened {
+	display: none;
+	@media only screen and (max-width: 850px) {
+		@include flexcol(center);
+		top: 76px;
+		height: calc(100vh - 76px);
+		opacity: 1;
+		pointer-events: auto;
+	}
+}

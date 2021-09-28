@@ -23,7 +23,9 @@
 					<a class="link" href="#0" title="Contacts">Contacts</a>
 				</li>
 			</ul>
-			<button class="navbar__trigger"><Icon icon="bars" /></button>
+			<button class="navbar__trigger" @click="trigger">
+				<Icon icon="bars" />
+			</button>
 		</div>
 	</nav>
 </template>
@@ -39,6 +41,11 @@ export default {
 	name: "Navbar",
 	components: {
 		Icon: FontAwesomeIcon,
+	},
+	methods: {
+		trigger() {
+			this.$emit("trigger");
+		},
 	},
 };
 </script>
