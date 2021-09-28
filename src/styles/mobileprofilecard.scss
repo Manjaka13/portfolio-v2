@@ -1,0 +1,121 @@
+.mobileprofilecard-container {
+	display: none;
+	@include screen-md-x {
+		width: 100%;
+		padding: 20px 0 20px 0;
+		@include flexcol(center);
+	}
+}
+
+.mobileprofilecard {
+	@include flexcol(center);
+	width: 90%;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px $color-2;
+	background: rgb(40, 40, 40);
+	padding-bottom: 20px;
+
+	@include screen-sm-x {
+		width: 95%;
+	}
+
+	&__figure {
+		@include flexrow(center, center);
+		width: 260px;
+		height: 260px;
+		background: white;
+		overflow: hidden;
+		box-shadow: 0px 0px 3px $color-2;
+		margin: 20px 0 0 0;
+		transform: rotate(10deg);
+		animation: oscillation infinite 3.1s ease-in-out;
+
+		@include screen-sm-x {
+			width: 190px;
+			height: 190px;
+		}
+
+		@keyframes oscillation {
+			0% {
+				transform: rotate(10deg);
+				transform-origin: 30px 30px;
+			}
+			50% {
+				transform: rotate(17deg);
+				transform-origin: 30px 30px;
+			}
+			100% {
+				transform: rotate(10deg);
+				transform-origin: 30px 30px;
+			}
+		}
+	}
+
+	&__image {
+		box-shadow: 0px 0px 1px black;
+		width: calc(260px - 10px);
+		height: calc(260px - 10px);
+		@include screen-sm-x {
+			width: calc(190px - 10px);
+			height: calc(190px - 10px);
+		}
+	}
+
+	&__title {
+		color: $color-4;
+		padding: 60px 20px 20px 20px;
+		text-shadow: 0px 1px 2px black;
+	}
+
+	&__separator {
+		width: calc(100% - 40px);
+		height: 3px;
+		margin: 0;
+		background: $color-theme;
+	}
+
+	&__description {
+		padding: 20px;
+		color: white;
+		text-align: justify;
+	}
+
+	&__current-work {
+		@include flexrow(space-between, center);
+		width: calc(100% - 40px);
+		padding: 0 20px 0 20px;
+		@include screen-sm-x {
+			@include flexcol(flex-start);
+		}
+		.label {
+			color: rgb(180, 180, 180);
+			text-decoration: underline;
+			@include screen-sm-x {
+				padding: 0 0 20px 0;
+			}
+		}
+		.company {
+			@include flexrow(center, center);
+			@include transition;
+			border-radius: 10px;
+			cursor: pointer;
+			&:hover {
+				background: rgba(20, 20, 20, 0.5);
+			}
+		}
+		.company-figure {
+			@include flexrow(center, center);
+			width: 50px;
+			height: 50px;
+			overflow: hidden;
+			border-radius: 10px;
+		}
+		.company-image {
+			height: 100%;
+		}
+		.company-name {
+			color: white;
+			padding: 0 0 0 10px;
+		}
+	}
+}
