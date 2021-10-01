@@ -39,6 +39,7 @@
 	}
 
 	&__section {
+		margin-right: 5px;
 		@media only screen and (max-width: 850px) {
 			display: none;
 		}
@@ -71,6 +72,7 @@
 		cursor: pointer;
 		background: rgba(40, 40, 40, 0.4);
 		@include transition;
+		margin-right: 20px;
 		&:hover {
 			background: $color-theme;
 		}

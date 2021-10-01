@@ -3,13 +3,32 @@
 	width: 550px;
 	height: 260px;
 	overflow: hidden;
+	@media only screen and (max-width: 1200px) {
+		width: 46%;
+		height: 400px;
+	}
 
-	&--reverse {
-		@include flexrow(flex-end, center);
+	@media only screen and (max-width: 920px) {
+		display: none;
 	}
 
 	.anim {
 		height: calc(100% - 40px);
 		border: none;
+		@media only screen and (max-width: 1200px) {
+			margin-left: 60px;
+		}
+	}
+
+	&--reverse {
+		@include flexrow(flex-end, center);
+		@media only screen and (max-width: 900px) {
+			display: none;
+		}
+		.anim {
+			@media only screen and (max-width: 1200px) {
+				margin-right: 60px;
+			}
+		}
 	}
 }

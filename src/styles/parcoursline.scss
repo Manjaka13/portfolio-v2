@@ -5,6 +5,14 @@
 	position: relative;
 	z-index: 1;
 
+	@media only screen and (max-width: 1200px) {
+		height: 400px;
+	}
+
+	@media only screen and (max-width: 920px) {
+		height: 140px;
+	}
+
 	&:after {
 		content: "";
 		width: 5px;

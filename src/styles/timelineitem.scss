@@ -2,12 +2,20 @@
 	@include flexrow(space-between);
 	width: calc(100% - 200px);
 	padding: 0 100px 0 100px;
+
 	@include screen-lg-x {
 		width: calc(100% - 40px);
 		padding: 0 20px 0 20px;
 	}
 
+	@media only screen and (max-width: 920px) {
+		@include flexcol(center);
+	}
+
 	&--reverse {
 		@include flexrowreverse(space-between);
+		@media only screen and (max-width: 920px) {
+			@include flexcol(center);
+		}
 	}
 }
