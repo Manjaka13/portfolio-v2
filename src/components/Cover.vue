@@ -35,7 +35,7 @@
 				</div>
 				<div class="cover__greetings">
 					<p class="label">{{greeting}}</p>
-					<button class="home">Download my resume</button>
+					<a class="home" :href="resume" download="Hire this developer">Download my resume</a>
 				</div>
 				<ul class="cover__social">
 					<li v-for="(s, key) in social" :key="key" class="cover__social-item">
@@ -48,6 +48,7 @@
 </template>
 
 <script>
+import resume from "../files/CV.pdf";
 import {library} from "@fortawesome/fontawesome-svg-core";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {fab} from "@fortawesome/free-brands-svg-icons";
@@ -61,6 +62,7 @@ export default {
 	},
 	data() {
 		return {
+			resume,
 			hours: null,
 			minutes: null,
 			date: null,

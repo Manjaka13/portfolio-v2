@@ -60,7 +60,7 @@ export default {
 	methods: {
 		submitForm() {
 			this.loading = true;
-			this.error = "Hello this is an error caption";
+			this.error = "This form does not work for now, please come back later.";
 		},
 	},
 };
