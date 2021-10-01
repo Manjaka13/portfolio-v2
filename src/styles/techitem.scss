@@ -1,11 +1,21 @@
 .techitem {
 	@include flexcol(center);
-	width: 300px;
+	width: 24%;
 	height: 450px;
 	overflow: hidden;
 	background: $color-4;
 	box-shadow: 0px 0px 5px $color-3;
 	@include transition;
+
+	@media only screen and (max-width: 1200px) {
+		width: 30%;
+	}
+	@media only screen and (max-width: 1025px) {
+		width: 49%;
+	}
+	@media only screen and (max-width: 600px) {
+		width: 100%;
+	}
 
 	&__illustration {
 		@include flexcol(center, center);

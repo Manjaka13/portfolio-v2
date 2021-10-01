@@ -1,13 +1,19 @@
 <template>
 	<div :class="'timelineitem' + (reverse ? ' timelineitem--reverse' : '')">
 		<Parcoursbox
-			:image="image"
-			exp="Série D"
-			title="Baccalauréat"
-			content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque cupiditate cumque rem, impedit maiores ipsam corrupti neque provident veritatis. Nostrum, enim excepturi. Deleniti magnam quos exercitationem vel quas beatae cupiditate."
+			:image="item.image"
+			:exp="item.exp"
+			:title="item.title"
+			:content="item.content"
 		/>
-		<Parcoursline :start="start" :end="end" :reverse="reverse" />
-		<Parcoursanim :reverse="reverse" />
+		<Parcoursline
+			:start="start"
+			:end="end"
+			:reverse="reverse"
+			:icon="item.icon"
+			:date="item.date"
+		/>
+		<Parcoursanim :reverse="reverse" :lottie="item.lottie" />
 	</div>
 </template>
 
@@ -36,6 +42,10 @@ export default {
 		reverse: {
 			type: Boolean,
 			default: false,
+		},
+		item: {
+			type: Object,
+			default: null,
 		},
 	},
 	data() {

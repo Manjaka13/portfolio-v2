@@ -12,8 +12,7 @@
 			est unde aut? Accusamus, architecto.
 		</p>
 
-		<Timelineitem start />
-		<Timelineitem end reverse />
+		<Timeline />
 
 		<Title title1="Next gen technologies" title2="My favourite techs" />
 		<p class="paragraph">
@@ -38,12 +37,13 @@ import Timelineitem from "components/Timelineitem.vue";
 import Tech from "components/Tech.vue";
 import ElementFilter from "components/ElementFilter.vue";
 import MobileProfileCard from "components/MobileProfileCard.vue";
+import Timeline from "components/Timeline.vue";
 
 export default {
 	name: "Home",
 	components: {
 		Title,
-		Timelineitem,
+		Timeline,
 		Tech,
 		ElementFilter,
 		MobileProfileCard,

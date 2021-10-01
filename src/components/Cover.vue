@@ -110,11 +110,11 @@ export default {
 	methods: {
 		getTime() {
 			const greetings = [
-				"What a beautiful sunrise visitor !",
-				"Good morning, another good day huh !",
-				"What a beautiful day, isn't it ?",
-				"I like to appreciate the sunset view !",
-				"Is the moon arise tonight ?",
+				"This morning, some go for jogging, but I prefer to code.",
+				"A beautiful day for a beautiful code !",
+				"I think I'm already hungry... Coffee time !",
+				"Let's take a pause and appreciate the sunset view",
+				"It's not good to code at night, go to bed for now...",
 			]
 			const date = new Date().toLocaleString("fr-FR", { hour12: false });
 			const time = parseInt(date.split(" ")[1].split(":")[0]);

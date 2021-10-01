@@ -1,25 +1,45 @@
 <template>
 	<div class="techitem">
-		<figure class="techitem__illustration" style="background: rgb(230, 75, 35)">
-			<img
-				class="techitem__image"
-				src="../images/html5.png"
-				alt="Technology illustration"
-			/>
+		<figure class="techitem__illustration" :style="'background: ' + color">
+			<img class="techitem__image" :src="image" alt="Technology illustration" />
 		</figure>
-		<h4 class="techitem__title">HTML5</h4>
-		<h5 class="techitem__projects">5 project(s)</h5>
+		<h4 class="techitem__title">{{ title }}</h4>
+		<h5 v-if="projects" class="techitem__projects">
+			{{ projects }} {{ projects > 1 ? "projects" : "project" }}
+		</h5>
 		<p class="paragraph techitem__content">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat officiis
-			doloribus ex commodi consectetur omnis ad, illum nobis, unde a alias itaque
-			veritatis hic.
+			{{ content }}
 		</p>
-		<button class="techitem__viewprojects">HTML5 projects</button>
+		<button v-if="projects && projects > 0" class="techitem__viewprojects">
+			{{ title }} projects
+		</button>
 	</div>
 </template>
 
 <script>
 export default {
 	name: "Techitem",
+	props: {
+		title: {
+			type: String,
+			default: "",
+		},
+		image: {
+			type: String,
+			default: "",
+		},
+		projects: {
+			type: Number,
+			default: null,
+		},
+		content: {
+			type: String,
+			default: "",
+		},
+		color: {
+			type: String,
+			default: "",
+		},
+	},
 };
 </script>

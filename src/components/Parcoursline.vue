@@ -4,7 +4,7 @@
 		<div class="icon">
 			<Icon :icon="icon" />
 		</div>
-		<div class="date">2015</div>
+		<div class="date">{{ date }}</div>
 		<div v-if="end" class="end"></div>
 	</div>
 </template>
@@ -37,6 +37,10 @@ export default {
 		icon: {
 			type: String,
 			default: "graduation-cap",
+		},
+		date: {
+			type: String,
+			default: "????",
 		},
 	},
 };

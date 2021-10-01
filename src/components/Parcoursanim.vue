@@ -1,9 +1,6 @@
 <template>
 	<div :class="'parcoursanim' + (reverse ? ' parcoursanim--reverse' : '')">
-		<iframe
-			class="anim"
-			src="https://embed.lottiefiles.com/animation/37296"
-		></iframe>
+		<iframe class="anim" :src="lottie"></iframe>
 	</div>
 </template>
 
@@ -14,6 +11,10 @@ export default {
 		reverse: {
 			type: Boolean,
 			default: false,
+		},
+		lottie: {
+			type: String,
+			default: "",
 		},
 	},
 };
