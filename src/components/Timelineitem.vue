@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import image from "../images/0.png";
 import Parcoursbox from "components/Parcoursbox.vue";
 import Parcoursline from "components/Parcoursline.vue";
 import Parcoursanim from "components/Parcoursanim.vue";
@@ -47,11 +46,6 @@ export default {
 			type: Object,
 			default: null,
 		},
-	},
-	data() {
-		return {
-			image,
-		};
 	},
 };
 </script>
