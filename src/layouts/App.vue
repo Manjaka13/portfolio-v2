@@ -2,6 +2,7 @@
 	<div id="home">
 		<Navbar @trigger="trigger" />
 		<Menu :opened="menuOpened" @close="trigger" />
+		<div id="cover"></div>
 		<Cover />
 		<div class="container">
 			<router-view />
@@ -10,6 +11,7 @@
 			>About</router-link
 		>
 		<router-view /> -->
+		<div id="contacts"></div>
 		<Contacts />
 	</div>
 </template>

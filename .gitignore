@@ -3,8 +3,6 @@ web
 Thumbs
 *.db
 publish.js
-package-lock.json
-yarn.lock
 node_modules/
 dist/
 .env

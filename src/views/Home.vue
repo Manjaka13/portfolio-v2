@@ -1,6 +1,7 @@
 <template>
 	<div class="home">
 		<MobileProfileCard />
+		<div id="journey"></div>
 		<Title title1="A passionate developer" title2="Let me tell a story" />
 		<p class="paragraph">
 			I have some experience in the software engineering. Here let me tell you a
@@ -18,6 +19,7 @@
 
 		<Timeline />
 
+		<div id="skills"></div>
 		<Title title1="Next gen technologies" title2="My favourite techs" />
 		<p class="paragraph">
 			As a developer, I already achieved many personal and professional projects to
@@ -33,10 +35,9 @@
 		<!-- <ElementFilter /> -->
 	</div>
 </template>
-ElementFilter ElementFilter
+
 <script>
 import Title from "components/Title.vue";
-import Timelineitem from "components/Timelineitem.vue";
 import Tech from "components/Tech.vue";
 import ElementFilter from "components/ElementFilter.vue";
 import MobileProfileCard from "components/MobileProfileCard.vue";

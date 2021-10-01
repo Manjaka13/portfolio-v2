@@ -11,16 +11,18 @@
 			</div>
 			<ul class="navbar__section">
 				<li class="navbar__section-item">
-					<a class="link" href="#0" title="About me">About me</a>
+					<a class="link" href="#cover" title="About me">Hari</a>
 				</li>
 				<li class="navbar__section-item">
-					<a class="link" href="#0" title="My Skills">My Skills</a>
+					<a class="link" href="#journey" title="A tale of a talented developpeur"
+						>Journey</a
+					>
 				</li>
 				<li class="navbar__section-item">
-					<a class="link" href="#0" title="Projects">Projects</a>
+					<a class="link" href="#skills" title="My main skills">My Skills</a>
 				</li>
 				<li class="navbar__section-item">
-					<a class="link" href="#0" title="Contacts">Contacts</a>
+					<a class="link" href="#contacts" title="Contact me !">Get in touch</a>
 				</li>
 			</ul>
 			<button class="navbar__trigger" @click="trigger">
